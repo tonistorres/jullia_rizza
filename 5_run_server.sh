@@ -1,7 +1,7 @@
 
 UPLOAD_SERVER(){
 
-set FLASK_APP=app.py
+set FLASK_APP=run.py
 flask run
 
 }
