@@ -1,3 +1,4 @@
+#!/bin/bash
 MENU_ISNTALL_ENVIRONMENT='
 ---------------------------------------------------
 Guardando as Dependencias do Projeto
