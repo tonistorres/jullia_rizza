@@ -55,6 +55,8 @@
     Iremos executar o arquivo <strong>7_initiall_aplication_flask.sh</strong> -> reponsável por criar a estrutura MVC (grupo de pastas e sub-pastas iniciais do projeto), e criar e escrever arquivos iniciais de configuração do projeto e roda o projeto inicial hellow world.  </i>   
 
  </p>
+
+
 [Youtube Júlia Rizo Falsk SQlAlchemy ](https://www.youtube.com/watch?v=R3nS66dgo2w&list=PL3BqW_m3m6a05ALSBW02qDXmfDKIip2KX&index=4)
  ![Logo](./flaskalch.jpeg)
  <p>
@@ -66,3 +68,37 @@
  <i>Já setado no ambiente virtual do módulo python a ser trabalhado, digite o seguinte comando:</i> <strong>pip3 install flask-sqlalchemy</strong>
  
  </p>
+
+[DOCUMENTAR DEPOIS A PARITR 23 min : 56 seg ](https://www.youtube.com/watch?v=yQtqkq9UkDA&t=14s)
+
+
+<h1>O que é o Alembic?</h1>
+
+<p>
+O <strong>Alembic</strong> foi inicialmente desenvolvido por Mike Bayers, mesmo criador do SQLAlchemy. Teve sua primeira versão lançada em novembro de 2011. 5 anos após a primeira versão do SQLAlchemy, em 2006.
+</br>
+ * Pode trabalhar em toda a camada DDL;
+</br>
+* Fornece scripts de migração de schemas para upgrades e downgrades;
+</br>
+*Suporte a geração de SQL (offline);
+</br>
+* API minimalista.
+</p>
+
+<p><strong>Instalação:<strong></p>
+
+![Instal Alembic](./alembic.png)
+
+
+<p><strong>Execução:</strong></p>
+
+<p>
+Entre na pasta do projeto, em nosso caso o diretório(app) e execute o comando abaixo conforme ilustração:
+<p>
+
+![Inicializando Pasta de migrações](./init.png)
+
+<p>Estrutura Criada no Projeto pelo comando<strong><i>alembic init migrations </i></strong></p>
+
+![Estrutura de pasta do App - Foco Migrations](./structure.png)
