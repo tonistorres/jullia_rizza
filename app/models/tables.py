@@ -1,3 +1,8 @@
+'''
+Referência para pesquisas futuras:
+https://www.youtube.com/watch?v=R3nS66dgo2w&list=PL3BqW_m3m6a05ALSBW02qDXmfDKIip2KX&index=4
+'''
+
 from app import db
 
 
@@ -42,7 +47,7 @@ class Post(db.Model):
         content=db.Column(db.Text)
        # o campo user_id recebe uma coluna que será uma chave estrangeira que fará
        # referência e relacionamento com o campo [id da tabela users]
-        user_id=db.Column(db.Integer, db.ForeignKey('users.id'))
+        user_id=db.Column(db.Integer, db.Foreignkey('users_id'))
         
         # evita ter que fazer join para saber que é o usário 
         # quando fizer uma pesquisa na tabela Post       
@@ -66,4 +71,13 @@ class Post(db.Model):
 
 class Follow(db.Model): 
     __tablename__="follow"
-           
+    
+    id=db.Column(db.Integer, primary_key=True)
+    user_id=db.Column(db.Integer, db.Foreignkey('users_id'))
+    follower_id = db.Column(db.Integer,db.Foreignkey('users_id'))
+    
+    
+    # evita ter que fazer join para saber que é o usário 
+    # quando fizer uma pesquisa na tabela Follow       
+    user = db.relationship('User', foreign_keys=user_id)
+    follower = db.relationship('User', foreign_keys=follower_id)       
