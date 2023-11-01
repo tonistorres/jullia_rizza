@@ -58,15 +58,27 @@
 
 
 [Youtube Júlia Rizo Falsk SQlAlchemy ](https://www.youtube.com/watch?v=R3nS66dgo2w&list=PL3BqW_m3m6a05ALSBW02qDXmfDKIip2KX&index=4)
+ 
  ![Logo](./flaskalch.jpeg)
+ 
  <p>
  <strong>O que é Flask SqlAlchemy?</strong><i> É um ORM completo, criado com Python para desenvolvedores de aplicativos, que fornece flexibilidade total do SQL, obtendo um conjunto completo de padrões de persistência de nível corporativo bem conhecidos, que são projetados para acesso a banco de dados eficientes e de alto desempenho.</i>
  </p>
 
  <p><strong>Instalação:</strong>
  </br>
- <i>Já setado no ambiente virtual do módulo python a ser trabalhado, digite o seguinte comando:</i> <strong>pip3 install flask-sqlalchemy</strong>
+  <i>Já setado no ambiente virtual do módulo python a ser trabalhado, digite o seguinte comando:</i> <strong>pip3 install flask-sqlalchemy</strong>
  
+ </p>
+
+ <p>
+  <strong>
+    Modelo do Banco de Dados a ser Trabalhado no Projeto:
+  <strong>
+  </br>
+
+  ![Logo](./model.png)
+
  </p>
 
 [DOCUMENTAR DEPOIS A PARITR 23 min : 56 seg ](https://www.youtube.com/watch?v=yQtqkq9UkDA&t=14s)
