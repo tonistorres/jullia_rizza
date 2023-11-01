@@ -1,7 +1,9 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
+from flask_script import Manager
+from flask_migrate import Migrate, MigrateCommand
+from app.controllers import default
 
 app = Flask(__name__)
 
@@ -14,6 +16,14 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1020@localhost:330
 db=SQLAlchemy(app)
 
 
-from app.controllers import default
+#Quero instânciar o Migrate e o Migrate irá cuidar das minhas migrações.
+# Ele recebe como parâmetro meu app e meu banco de dados 
+migrate=Migrate(app=app, db=db)
 
+# O Manager irá cuidar dos comandos que executar na inicialização da minha aplicação 
 
+manager=Manager(app=app)
+@manager.command
+
+def hello():
+    print ("hello")
