@@ -114,3 +114,61 @@ Entre na pasta do projeto, em nosso caso o diretório(app) e execute o comando a
 <p>Estrutura Criada no Projeto pelo comando<strong><i>alembic init migrations </i></strong></p>
 
 ![Estrutura de pasta do App - Foco Migrations](./structure.png)
+
+<h3>Arquivos Importante Criados Juntos a Estrutura de Pastas:</h3>
+
+
+<p>
+<strong>* alembic.init</strong></br>
+<i>O script escrito no alembic.init é uma arquivo criado de forma automática, portanto, genérico que consiste numa configuração para um único banco de Dados.</i>
+</p>
+
+<h4>Exemplificando: Gerando a primeira migração:</h4>
+-  Comando que criar um versionamento na pasta <i>migrations</i> conforme configurações aqui explicitada logo no readme.mb acima.
+
+
+![Comando cria um versionamento](./revision.png)
+
+<h4>Corpo do Script (conteúdo do versionamento):</h4>
+
+```
+"""primeira
+
+Revision ID: 41244e6b200b
+Revises: 
+Create Date: 2023-11-04 08:51:40.598200
+
+"""
+from typing import Sequence, Union
+
+# Api de operações DDL 
+from alembic import op
+
+
+import sqlalchemy as sa
+
+
+# revision identifiers, used by Alembic.
+revision: str = '41244e6b200b'
+down_revision: Union[str, None] = None
+branch_labels: Union[str, Sequence[str], None] = None
+depends_on: Union[str, Sequence[str], None] = None
+
+# (Explicação Youtube em 37 min)[https://www.youtube.com/watch?v=yQtqkq9UkDA&t=14s]
+
+# upgrade -> é a função que aplica a migração, ou seja, como é que essa migração será aplicada de fato.
+# Exemplo: Quero criar uma tabela, quero modificar ... 
+def upgrade() -> None:
+    pass
+
+# downgrade -> quero excluir uma tabela, remover a coluna 
+def downgrade() -> None:
+    pass
+
+
+```
+
+[Documentação SqlAlchemy Core](https://docs.sqlalchemy.org/en/20/core/)
+
+<h4>SqlAlchemy Core:</h4>
+<p>Os tipos de dados e as abstrações necessárias para executar a API de operações estão no SQL Alchemy Core</p>
