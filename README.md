@@ -56,6 +56,90 @@
 
  </p>
 
+[Vídeo Exemplo Organizando aplicação no modelo MVC](https://www.youtube.com/watch?v=0iHsyTkyoXo&list=PL3BqW_m3m6a05ALSBW02qDXmfDKIip2KX&index=3)
+
+<h4>Organizando a aplicação no modelo MVC</h4>
+<p> 
+
+* 1º vamos criar a pasta principal a nomearei de <strong><i>app</i></strong><br>
+
+* 2º Dentro da pasta principal <strong>app</strong>, iremos criar as seguintes sub-pastas:<br>
+    
+    * models - iremos tercerizar essa camada para orm sqlalchemy;
+    * controllers - onde ficará a lógica da aplicação;
+    * static - onde ficarão os arquivos estáticos (css) ...
+    * tempaltes - onde ficarão os arquivos html.
+ <p>
+
+ <p>
+ <b>Observação 1:</b> No flask temos um padrão que toda pasta contendo arquivo html se chamam <strong>templates</strong> e a pasta que contém arquivos estáticos<b>(css)</b> se chama <strong>static</strong>
+ </p>
+
+
+<h4>Ilustração:</h4>
+
+ ![Logo](./app.png)
+
+<p>
+<b>Observação 2:</b> dentro da pasta principal <strong>app</strong> criaremos um arquivo com o nome <strong>__init__.py</strong> utilizamos esse procedimento de criar esse arquivo quando iremos treabalhar com módulos dentro do python. O  <strong>__init__.py</strong> aqui explicitádo está indicando que a pasta <b>app</b>
+ é o módulo principal e que no futuro teremos sub-módulos dentro da pasta  <strong>app</strong> onde cda uma das pastas terão  <strong>__init__.py</strong> com exceção da pasta <i>templates e static</i>
+</p>
+
+<p>
+ O <strong>__init__.py</strong> <b><i>principal</i></b> que está dentro da pasta <b><i>app</i></b> conterá as configurações principais do flask.
+</p>
+
+
+<h4>Ilustração arquivo <strong>__init__.py da pasta app</strong>:</h4>
+
+![Logo](./app__init__.png)
+
+ ```py
+ 
+from flask import Flask
+
+
+app = Flask(__name__)
+
+# importando o módulo controllers para o módulo  
+# principal de execução
+from app.controllers import default
+ ```
+
+
+<p>
+<b>Observação 3:</b> No arquivo <strong>run.py</strong>
+ficará a lógica para iniciar a execução da aplicação.
+<p>
+
+
+![local run.py](./run.png)
+
+
+```py
+# Neste arquivo ficará a lógica para startar
+# a aplicação
+
+from app import app
+
+
+if __name__ =="__main__":
+    app.run()
+
+
+```
+<p>Observação 4: a camada de <b>controllers</b> será conterá os arquivos de lógica da aplicação, como exemplo inicial temos o arquivos (__init__.py) indicando que é um sub-módulo de <b>app</b> dentro do python e temos o arquivo (default.py) com um exemplo de hello word na rota index da aplicação. </p>
+
+![controllers](./controllers.png)
+```py
+from app import app 
+
+@app.route("/")
+def index():
+    return f" 🤟 Hellow World"
+
+```
+
 
 [Youtube Júlia Rizo Falsk SQlAlchemy ](https://www.youtube.com/watch?v=R3nS66dgo2w&list=PL3BqW_m3m6a05ALSBW02qDXmfDKIip2KX&index=4)
  
