@@ -17,7 +17,10 @@ down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
-
+'''
+Em nosso exemplo por meio da função upgrade 
+estou criando uma tabela do tipo user
+'''
 def upgrade() -> None:
     op.create_table(
         'user',
@@ -29,7 +32,10 @@ def upgrade() -> None:
         
     )
 
-
+'''
+Em nosso exemplo por meio da função downgrade estou 
+dropando essa tabela
+'''
 def downgrade() -> None:
     op.drop_table(
         'user'
