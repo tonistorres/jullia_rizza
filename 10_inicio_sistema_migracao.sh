@@ -20,7 +20,7 @@ read -p "s (sim) e n (não) -->> " CONFIRM
 echo --------------------------------------------------------
 
 if [ "$CONFIRM" = s ];then
-alembic init migrations
+alembic init alembic
 else
 echo "O Script não está sendo executado dentro da pasta"
 echo -e "\033[31m app conforme Modelo MVC   \033[m"

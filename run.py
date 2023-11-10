@@ -1,6 +1,3 @@
-# Neste arquivo ficará a lógica para startar
-# a aplicação
-
 from app import app
 
 
