@@ -7,6 +7,8 @@
 
 [Youtube Júlia Rizo PlayList Flask ](https://www.youtube.com/watch?v=0iHsyTkyoXo&list=PL3BqW_m3m6a05ALSBW02qDXmfDKIip2KX&index=3)
 
+[Alembic API de Operações Documentação](https://alembic.sqlalchemy.org/en/latest/ops.html#alembic.operations.Operations.create_foreign_key)
+
 ![Logo](./logoFlask.jpeg)
 
 
@@ -455,8 +457,26 @@ No arquivo alembic.ini na pasta raiz iremos fazer configuração da URI do banco
 
 <h4>Executando codigo que startar migração:</h4>
 
+[Explicação do comando alembic upgrade head  48min 55seg ](https://www.youtube.com/watch?v=yQtqkq9UkDA&t=14s)
+
 ```sh
-# head -> para ir para última migração
+# head -> Executa todas as migrações relacionadas a função upgrade
 alembic upgrade head
 ```
+<h4>Desfazendo a migração comando:</h4>
 
+```sh
+# Executa todas a migrações relacionada a função donwgrade 
+alembic downgrade base
+```
+
+<h4>Vê o Histórico comando:</h4>
+
+```sh
+# histórico da execução das migrações
+alembic history
+```
+[Executando SQL Personalizado com Alembic ](https://learnbatta.com/blog/alembic-ddl-operations/)
+```sh
+op.execute('create view product_view as select * from product')
+```
