@@ -477,6 +477,14 @@ alembic downgrade base
 alembic history
 ```
 [Executando SQL Personalizado com Alembic ](https://learnbatta.com/blog/alembic-ddl-operations/)
+
+<h1> Para esse exemplo estudar esse link</h1>
+
+[relacionamento de tabelas com sql gerar as migrações de relacionamento](https://www.udemy.com/course/curso-mysql/learn/lecture/5078898?start=570#overview)
 ```sh
 op.execute('create view product_view as select * from product')
 ```
+
+<h1>Da prosseguimento a partir daqui </h1>
+
+[Dunossauro 52min ](https://learnbatta.com/blog/alembic-ddl-operations/)

@@ -19,8 +19,16 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-
-
+    op.create_table(
+        'follow',
+        sa.Column('id', sa.Integer(),primary_key=True),
+        sa.Column('id_user', sa.Integer(), nullable=False),
+        sa.Column('id_follower', sa.Integer(),nullable=False),
+        
+        
+    )
 
 def downgrade() -> None:
-    pass
+    op.drop_table(
+        'follow'
+    )
